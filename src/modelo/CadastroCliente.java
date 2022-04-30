@@ -8,7 +8,7 @@ package modelo;
  *
  * @author diego
  */
-public class Cadastro {
+public class CadastroCliente {
     private String cargo;
     private String nome;
     private String email;

@@ -10,8 +10,11 @@ import java.io.IOException;
 
 import controllers.LoginWindowController;
 import controllers.TelaCadastroClienteController;
-import controllers.TelaCadastroClienteController;
+import controllers.TelaCadastroEmpresaController;
+import controllers.TelaCadastroMensagemController;
 import controllers.TelaInicialController;
+import controllers.TelaInicialSuporteController;
+import controllers.TelaMensagensCadastradasController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
@@ -27,8 +30,24 @@ public class ViewFactory{
             initializeStage(controller);
         
         }
-        public void TelaInicial(){
-            BaseController controller = new TelaInicialController(this, "TelaInicial.fxml");
+        public void TelaInicialSuporte(){
+            BaseController controller = new TelaInicialSuporteController(this, "TelaInicialSuporte.fxml");
+            initializeStage(controller);
+                    }
+        public void TelaCadastroCliente(){
+            BaseController controller = new TelaCadastroClienteController(this, "TelaCadastroCliente.fxml");
+            initializeStage(controller);
+                    }
+        public void TelaCadastroEmpresa(){
+            BaseController controller = new TelaCadastroEmpresaController(this, "CadastroEmpresa.fxml");
+            initializeStage(controller);
+                    }
+        public void TelaCadastroMensagem(){
+            BaseController controller = new TelaCadastroMensagemController(this, "TelaCadastroMensagem.fxml");
+            initializeStage(controller);
+                    }
+        public void TelaMensagensCadastradas(){
+            BaseController controller = new TelaMensagensCadastradasController(this, "TelaMensagensCadastradas.fxml");
             initializeStage(controller);
                     }
         

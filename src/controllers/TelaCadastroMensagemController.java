@@ -22,6 +22,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
+import javafx.stage.Stage;
 import modelo.Cadastro_mensagem;
 import view.ViewFactory;
 
@@ -43,6 +44,13 @@ public class TelaCadastroMensagemController extends BaseController{
     @FXML
     private TextField Titulo;
 
+    @FXML
+    void Voltar(ActionEvent event) {
+        viewFactory.TelaInicialSuporte();
+        Stage stage = (Stage)Titulo.getScene().getWindow();
+        viewFactory.closeStage(stage);
+    }
+    
     @FXML
     void CM(ActionEvent event) {
         String titulo, categoria, meio_comunicacao, conteudo;

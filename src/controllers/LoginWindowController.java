@@ -25,7 +25,7 @@ public class LoginWindowController extends BaseController{
 	 
     @FXML
     void Entrar(ActionEvent event) throws IOException {
-        viewFactory.TelaInicial();
+        viewFactory.TelaInicialSuporte();
         Stage stage = (Stage)areaEmail.getScene().getWindow();
         viewFactory.closeStage(stage);
     

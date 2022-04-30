@@ -10,13 +10,15 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 import view.ViewFactory;
 
 public class TelaMensagensCadastradasController extends BaseController{
    
     public TelaMensagensCadastradasController(ViewFactory viewFactory, String fxmlName){
         super(viewFactory, fxmlName);
-    }  
+    }
+    
     
     @FXML
     private TableColumn<?, ?> colunaData;
@@ -37,16 +39,11 @@ public class TelaMensagensCadastradasController extends BaseController{
     private VBox mensagensCadastradas;
 
     @FXML
-    void TelaCC(ActionEvent event) {
-
+    void Voltar(ActionEvent event) {
+        viewFactory.TelaInicialSuporte();
+        Stage stage = (Stage)mensagensCadastradas.getScene().getWindow();
+        viewFactory.closeStage(stage);
     }
-
-    @FXML
-    void TelaCM(ActionEvent event) {
-
-    }
-
-    
 }
     
 

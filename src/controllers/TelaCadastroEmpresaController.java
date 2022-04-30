@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import modelo.Cadastro_empresa;
 import view.ViewFactory;
 
@@ -15,7 +16,7 @@ public class TelaCadastroEmpresaController extends BaseController{
     }    
 
 
-    @FXML
+   @FXML
     private TextField NomeEmpresa;
 
     @FXML
@@ -23,6 +24,13 @@ public class TelaCadastroEmpresaController extends BaseController{
 
     @FXML
     private TextField Responsavel;
+
+    @FXML
+    void Voltar(ActionEvent event) {
+        viewFactory.TelaInicialSuporte();
+        Stage stage = (Stage)Projeto.getScene().getWindow();
+        viewFactory.closeStage(stage);
+    }
 
         @FXML
             void CE(ActionEvent event) {

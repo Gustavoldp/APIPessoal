@@ -7,14 +7,14 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
-import modelo.Cadastro;
+import modelo.CadastroCliente;
 
 
-public class CadastroDAO {
+public class CadastroClienteDAO {
     Connection conn;
     PreparedStatement pstm;
     
-    public void cadastrar(Cadastro objcadastro){
+    public void cadastrar(CadastroCliente objcadastro){
         String sql = "INSERT INTO cadastro(cargo, nome, email, nome_empresa, projetos, telefone) VALUES(?,?,?,?,?,?)";
         
         conn = new ConnectionFactory().conectaBD();

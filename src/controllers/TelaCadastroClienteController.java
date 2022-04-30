@@ -1,7 +1,7 @@
 package controllers;
 
  
-import Dao.CadastroDAO;
+import Dao.CadastroClienteDAO;
 import Dao.Cadastro_empresaDAO;
 import Dao.Cadastro_mensagemDAO;
 import javafx.event.ActionEvent;
@@ -32,7 +32,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.stage.Stage;
-import modelo.Cadastro;
+import modelo.CadastroCliente;
 import modelo.Cadastro_empresa;
 import modelo.Cadastro_mensagem;
 import view.ViewFactory;
@@ -65,15 +65,11 @@ public class TelaCadastroClienteController extends BaseController{
     @FXML
     private VBox cadastroCliente;
     
-    
-     @FXML
-    void telaCM(ActionEvent event) {
-
-    }
-
     @FXML
-    void telaMC(ActionEvent event) {
-
+    void Voltar(ActionEvent event) {
+        viewFactory.TelaInicialSuporte();
+        Stage stage = (Stage)Telefone.getScene().getWindow();
+        viewFactory.closeStage(stage);
     }
 
     @FXML
@@ -87,7 +83,7 @@ public class TelaCadastroClienteController extends BaseController{
                     projetos = Projeto.getText();
                     telefone = Telefone.getText();
 
-                    Cadastro objcadastro = new Cadastro();
+                    CadastroCliente objcadastro = new CadastroCliente();
                     objcadastro.setCargo(cargo);
                     objcadastro.setNome(nome);
                     objcadastro.setEmail(email);
@@ -95,7 +91,7 @@ public class TelaCadastroClienteController extends BaseController{
                     objcadastro.setProjetos(projetos);
                     objcadastro.setTelefone(telefone);
 
-                    CadastroDAO objcadastrodao = new CadastroDAO();
+                    CadastroClienteDAO objcadastrodao = new CadastroClienteDAO();
                     objcadastrodao.cadastrar(objcadastro);
 
     }
