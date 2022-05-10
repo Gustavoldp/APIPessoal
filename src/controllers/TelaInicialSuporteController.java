@@ -50,6 +50,12 @@ public class TelaInicialSuporteController extends BaseController{
         Stage stage = (Stage)Ajuda.getScene().getWindow();
         viewFactory.closeStage(stage);
     }
+    @FXML
+    void CT(ActionEvent event) {
+        viewFactory.TelaChat();
+        Stage stage = (Stage)Ajuda.getScene().getWindow();
+        viewFactory.closeStage(stage);
+    }
 
     
 }

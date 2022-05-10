@@ -79,6 +79,8 @@
                               <Insets top="17.0" />
                            </VBox.margin>
                         </TextField>
+                        
+                        <Label fx:id="invalidDetails" layoutX="88.0" layoutY="446.0" prefWidth="245.0" textFill="RED" />
                      </children>
                   </VBox>
                </children>

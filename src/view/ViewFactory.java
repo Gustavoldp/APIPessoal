@@ -12,6 +12,7 @@ import controllers.LoginWindowController;
 import controllers.TelaCadastroClienteController;
 import controllers.TelaCadastroEmpresaController;
 import controllers.TelaCadastroMensagemController;
+import controllers.TelaChatController;
 import controllers.TelaInicialController;
 import controllers.TelaInicialSuporteController;
 import controllers.TelaMensagensCadastradasController;
@@ -50,6 +51,11 @@ public class ViewFactory{
             BaseController controller = new TelaMensagensCadastradasController(this, "TelaMensagensCadastradas.fxml");
             initializeStage(controller);
                     }
+        public void TelaChat(){
+            BaseController controller = new TelaChatController(this, "TelaChat.fxml");
+            initializeStage(controller);
+        
+        }
         
         public void initializeStage(BaseController baseController){
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(baseController.getFxmlName()));
