@@ -20,7 +20,7 @@
       </ImageView>
       <HBox layoutX="28.0" layoutY="144.0" prefHeight="138.0" prefWidth="866.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="150.0" style="-fx-background-color: FFC107; -fx-background-radius: 20px; -fx-border-radius: 20;" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#CT" prefHeight="48.0" prefWidth="150.0" style="-fx-background-color: FFC107; -fx-background-radius: 20px; -fx-border-radius: 20;" textFill="WHITE">
                <HBox.margin>
                   <Insets left="100.0" />
                </HBox.margin>

@@ -4,9 +4,11 @@
  */
 package controllers;
 
+import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 import view.ViewFactory;
 
@@ -19,6 +21,8 @@ public class TelaChatController extends BaseController{
     public TelaChatController(ViewFactory viewFactory, String fxmlName){
         super(viewFactory, fxmlName);
     } 
+    @FXML
+    private TextArea MessageBox;
     
     @FXML
     private Button sendButton;
@@ -27,7 +31,7 @@ public class TelaChatController extends BaseController{
     private Button voltar;
 
     @FXML
-    void SendMessage(ActionEvent event) {
+    void SendMessage(ActionEvent event) throws IOException {
         
     }
     

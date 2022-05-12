@@ -26,7 +26,7 @@
       </HBox>
       <HBox layoutX="218.0" layoutY="499.0" prefHeight="50.0" prefWidth="683.0">
          <children>
-            <TextArea prefHeight="58.0" prefWidth="608.0" />
+            <TextArea fx:id="MessageBox" prefHeight="58.0" prefWidth="608.0" />
             <Button fx:id="sendButton" mnemonicParsing="false" onAction="#SendMessage" prefHeight="58.0" prefWidth="74.0" style="-fx-background-color: #FAC341;" text="Enviar" textFill="WHITE" />
          </children>
       </HBox>
